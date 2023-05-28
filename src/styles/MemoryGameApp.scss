@@ -1,0 +1,7 @@
+.memory-game {
+  &__title {
+    @apply tw-text-3xl;
+    @apply tw-font-bold;
+    @apply tw-underline;
+  }
+}
