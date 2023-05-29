@@ -1,4 +1,4 @@
-import { PropTypes } from "prop-types";
+import PropTypes from "prop-types";
 
 export const MemoryCard = ({ card, id, selectCard }) => {
   const { url_image, stat } = card;
