@@ -62,7 +62,10 @@ export const MemoryGrid = ({ username }) => {
   return (
     <>
       <div className="memory-game__markers">
-        <h2>¡ Bienvenido {username} !</h2>
+        <h2>
+          ¡ {isGameFinished ? "Felicidades " : "Bienvenido "} {username} !
+        </h2>
+        {isGameFinished && <p>Has terminado el juego, este es tu score 👇🏻</p>}
         <div className="memory-game__markers--flex">
           <p>Aciertos: {hits}</p>
           <p>Errores: {mistakes}</p>
