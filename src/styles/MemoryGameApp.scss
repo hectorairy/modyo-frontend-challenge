@@ -1,11 +1,74 @@
 .memory-game {
   &__container {
+    @apply tw-py-4;
     @apply tw-flex;
+    @apply tw-flex-col;
     @apply tw-justify-center;
     @apply tw-items-center;
-    @apply tw-w-screen;
-    @apply tw-h-screen;
-    @apply tw-bg-indigo-950;
-    @apply tw-text-gray-900;
+    @apply tw-min-h-screen;
+  }
+
+  &__grid {
+    @apply tw-grid;
+    @apply tw-grid-cols-2;
+    @apply sm:tw-grid-cols-4;
+    @apply tw-gap-2;
+  }
+
+  &__card {
+    @apply tw-bg-white;
+    @apply tw-w-36;
+    @apply tw-h-36;
+    @apply md:tw-w-40;
+    @apply md:tw-h-40;
+    @apply tw-rounded-lg;
+    @apply tw-border-2;
+    @apply tw-transition-transform;
+    transition: transform 0.5s;
+    transform: rotateY(180deg);
+    animation: 2s hidingCard;
+
+    @keyframes hidingCard {
+      0%,
+      40% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(180deg);
+      }
+    }
+
+    img {
+      @apply tw-w-full;
+      @apply tw-h-full;
+      @apply tw-rounded-lg;
+      @apply tw-object-cover;
+      transition: transform 0.5s;
+      @apply tw-scale-0;
+      animation: 2s hidingImage;
+      @keyframes hidingImage {
+        0%,
+        40% {
+          @apply tw-scale-100;
+        }
+        100% {
+          @apply tw-scale-0;
+        }
+      }
+    }
+
+    &--active {
+      transform: rotateY(0deg);
+      img {
+        @apply tw-scale-100;
+      }
+
+      &-correct {
+        @apply tw-border-green-600;
+      }
+      &-wrong {
+        @apply tw-border-red-600;
+      }
+    }
   }
 }

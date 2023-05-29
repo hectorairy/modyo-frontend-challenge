@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { WelcomeForm } from "./components/WelcomeForm";
+import { MemoryGrid } from "./components/MemoryGrid";
+
 import "./styles/MemoryGameApp.scss";
 
 export const MemoryGameApp = () => {
@@ -20,7 +22,7 @@ export const MemoryGameApp = () => {
           setUsername={setUsername}
         />
       ) : (
-        <p>GAME</p>
+        <MemoryGrid username={username} />
       )}
     </div>
   );

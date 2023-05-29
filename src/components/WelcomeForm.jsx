@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-import "../styles/components/WelcomeForm.scss";
+import "../styles/WelcomeForm.scss";
 
 export const WelcomeForm = ({ setUser, username, setUsername }) => {
   const [error, setError] = useState(false);
