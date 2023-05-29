@@ -1,8 +1,9 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
 import "../styles/components/WelcomeForm.scss";
 
-export const WelcomeForm = () => {
-  const [username, setUsername] = useState("");
+export const WelcomeForm = ({ setUser, username, setUsername }) => {
   const [error, setError] = useState(false);
   const handleSubmit = () => {
     setError(false);
@@ -11,6 +12,7 @@ export const WelcomeForm = () => {
       return false;
     }
     localStorage.setItem("username", username);
+    setUser(true);
   };
   return (
     <div className="welcome-form__container">
@@ -39,4 +41,10 @@ export const WelcomeForm = () => {
       </button>
     </div>
   );
+};
+
+WelcomeForm.propTypes = {
+  setUser: PropTypes.func.isRequired,
+  username: PropTypes.string.isRequired,
+  setUsername: PropTypes.func.isRequired,
 };
