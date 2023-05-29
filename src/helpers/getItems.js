@@ -10,7 +10,7 @@ export const getItems = async () => {
       url_image: item.fields.image.url,
       stat: "",
     }));
-    const cloneItems = structuredClone(items);
+    const cloneItems = JSON.parse(JSON.stringify(items));
     return [...items, ...cloneItems].sort(() => Math.random() - 0.5);
   } catch (error) {
     console.log(error);
