@@ -1,0 +1,59 @@
+.welcome-form {
+  &__container {
+    @apply tw-w-72;
+    @apply md:tw-w-96;
+    @apply tw-bg-white;
+    @apply tw-rounded;
+    @apply tw-px-4;
+    @apply tw-py-8;
+    @apply tw-text-center;
+  }
+
+  &__title {
+    @apply tw-font-bold;
+    @apply tw-text-xl;
+    @apply tw-mb-2;
+  }
+
+  &__subtitle {
+    @apply tw-text-justify;
+    @apply tw-mb-6;
+  }
+
+  &__input {
+    @apply tw-appearance-none;
+    @apply tw-border;
+    @apply tw-border-blue-100;
+    @apply tw-rounded;
+    @apply tw-w-full;
+    @apply tw-py-2;
+    @apply tw-px-4;
+    @apply tw-mb-4;
+    @apply focus:tw-outline-none;
+    @apply focus:tw-bg-white;
+    @apply focus:tw-border-blue-500;
+  }
+
+  &__error {
+    @apply tw-text-red-500;
+    @apply tw-mb-4;
+  }
+
+  &__button {
+    @apply tw-font-bold;
+    @apply tw-text-center;
+    @apply tw-uppercase;
+    @apply tw-transition-all;
+    @apply tw-text-xs;
+    @apply tw-py-3;
+    @apply tw-px-6;
+    @apply tw-rounded-lg;
+    @apply tw-border;
+    @apply tw-border-blue-500;
+    @apply tw-text-blue-500;
+    @apply hover:tw-opacity-75;
+    @apply focus:tw-ring;
+    @apply focus:tw-ring-blue-200;
+    @apply active:tw-opacity-[0.85];
+  }
+}

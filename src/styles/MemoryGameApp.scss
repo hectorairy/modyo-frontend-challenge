@@ -1,7 +1,11 @@
 .memory-game {
-  &__title {
-    @apply tw-text-3xl;
-    @apply tw-font-bold;
-    @apply tw-underline;
+  &__container {
+    @apply tw-flex;
+    @apply tw-justify-center;
+    @apply tw-items-center;
+    @apply tw-w-screen;
+    @apply tw-h-screen;
+    @apply tw-bg-indigo-950;
+    @apply tw-text-gray-900;
   }
 }
