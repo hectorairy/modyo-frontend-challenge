@@ -8,6 +8,25 @@
     @apply tw-min-h-screen;
   }
 
+  &__markers {
+    @apply tw-text-center;
+    @apply tw-mb-4;
+    @apply tw-bg-white;
+    @apply tw-rounded-lg;
+    @apply tw-w-96;
+    @apply tw-p-4;
+
+    h2 {
+      @apply tw-text-2xl;
+    }
+
+    &--flex {
+      @apply tw-flex;
+      @apply tw-gap-4;
+      @apply tw-justify-center;
+    }
+  }
+
   &__grid {
     @apply tw-grid;
     @apply tw-grid-cols-2;

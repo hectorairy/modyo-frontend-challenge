@@ -10,7 +10,10 @@ export const MemoryGameApp = () => {
 
   useEffect(() => {
     const user = localStorage.getItem("username");
-    setIsUser(!!user);
+    if (user) {
+      setUsername(user);
+      setIsUser(true);
+    }
   }, []);
 
   return (

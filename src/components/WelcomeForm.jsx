@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 import "../styles/WelcomeForm.scss";
+import { Button } from "./Button";
 
 export const WelcomeForm = ({ setUser, username, setUsername }) => {
   const [error, setError] = useState(false);
@@ -36,9 +37,7 @@ export const WelcomeForm = ({ setUser, username, setUsername }) => {
         </p>
       )}
 
-      <button className="welcome-form__button" onClick={handleSubmit}>
-        ¡Empecemos a jugar!
-      </button>
+      <Button handleClick={handleSubmit}>¡Empecemos a jugar!</Button>
     </div>
   );
 };

@@ -38,22 +38,4 @@
     @apply tw-text-red-500;
     @apply tw-mb-4;
   }
-
-  &__button {
-    @apply tw-font-bold;
-    @apply tw-text-center;
-    @apply tw-uppercase;
-    @apply tw-transition-all;
-    @apply tw-text-xs;
-    @apply tw-py-3;
-    @apply tw-px-6;
-    @apply tw-rounded-lg;
-    @apply tw-border;
-    @apply tw-border-blue-500;
-    @apply tw-text-blue-500;
-    @apply hover:tw-opacity-75;
-    @apply focus:tw-ring;
-    @apply focus:tw-ring-blue-200;
-    @apply active:tw-opacity-[0.85];
-  }
 }
