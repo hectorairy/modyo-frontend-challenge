@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WelcomeForm /> tests should match with snapshot  1`] = `
+<div>
+  <div
+    class="welcome-form__container"
+  >
+    <h2
+      class="welcome-form__title"
+    >
+      ¡Bienvenido a MemoryGame!
+    </h2>
+    <p
+      class="welcome-form__subtitle"
+    >
+      Nos encanta tenerte aquí, por favor dinos tu nombre para poder conocernos mejor. 😁
+    </p>
+    <input
+      class="welcome-form__input"
+      placeholder="Ej. Hector Jimenez"
+      type="text"
+      value=""
+    />
+    <button
+      class="custom-button"
+    >
+      ¡Empecemos a jugar!
+    </button>
+  </div>
+</div>
+`;
