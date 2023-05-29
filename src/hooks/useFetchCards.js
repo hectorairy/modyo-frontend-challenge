@@ -15,5 +15,6 @@ export const useFetchCards = (initialState) => {
 
   return {
     cards,
+    setCards,
   };
 };

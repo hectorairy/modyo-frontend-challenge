@@ -5,13 +5,13 @@ export const getItems = async () => {
     const res = await fetch(IMG_API);
     const { entries } = await res.json();
     const items = entries.map((item) => ({
-      id: item.meta.uuid,
+      uuid: item.meta.uuid,
       name: item.meta.name,
       url_image: item.fields.image.url,
       stat: "",
     }));
-    const newItems = [...items, ...items].sort(() => Math.random() - 0.5);
-    return newItems;
+    const cloneItems = structuredClone(items);
+    return [...items, ...cloneItems].sort(() => Math.random() - 0.5);
   } catch (error) {
     console.log(error);
   }
